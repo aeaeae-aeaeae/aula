@@ -7,9 +7,9 @@ header {
 }
 
 .logo {
-    border: 0.1rem blue solid;
-    background-color: blue;
-    color: #eee;
+    border: 0.1rem rgb(58, 12, 80) solid;
+    background-color: rgb(252, 252, 252);
+    color: #1d0e20;
     font-weight: bold;
     border-radius: 100%;
     width: 1rem;
