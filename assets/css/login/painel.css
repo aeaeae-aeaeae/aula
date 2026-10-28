@@ -41,7 +41,7 @@ form {
     padding: 0.75rem 0.75rem 0.75rem 2.5rem;
     border-radius: 0.5rem;
     border: 0.1rem solid #555;
-    background-color: #b8a8bb;
+    background-color: #ede0f0;
     color: #eee;
     font-size: 1rem;
 }
@@ -91,12 +91,13 @@ button:hover {
 }
 
 .links-auxiliares a {
-    color: #4a90e2;
+    color: #984ae2;
     text-decoration: none;
+    
 }
 
 .links-auxiliares a:hover {
-    color: #6ba3f5;
+    color: #c96bf5;
     text-decoration: underline;
 }
 
