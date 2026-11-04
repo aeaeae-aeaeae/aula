@@ -42,5 +42,5 @@ function apresentarNoticias() {
         `;
         
         container_das_noticias.appendChild(cartao);
-    })
+    });
 }
