@@ -1,19 +1,11 @@
 import { dados_das_noticias } from "./bd.js";
-import { mensagens } from "./mensagens.js";
 
 let vetor_das_noticias = [];
 const container_das_noticias = document.getElementById("noticias");
 const opcao_noticia = document.getElementById("opcao-noticia");
 
-const container_mensagens = document.getElementById("mensagens");
-const opcao_mensagem = document.getElementById("opcao-mensagem");
-
 opcao_noticia.addEventListener("click", (e) => { 
     alternarApresentacaoDasNoticias();
-});
-
-opcao_mensagem.addEventListener("click", (e) => { 
-    alternarApresentacaoDasMensagens();
 });
 
 function alternarApresentacaoDasNoticias() {
@@ -50,38 +42,5 @@ function apresentarNoticias() {
         `;
         
         container_das_noticias.appendChild(cartao);
-    });
-}
-
-function alternarApresentacaoDasMensagens() {
-    if (vetor_das_mensagens.length == 0) {
-        carregarMensagens();
-        apresentarMensagens();
-    } else {
-        container_das_mensagens.innerHTML = "";
-        vetor_das_mensagens = [];
-    }
-}
-
-const carregarMensagens = async() => {
-    vetor_das_mensagens = mensagens;
-}
-
-function apresentarMensagens() {
-    vetor_das_mensagens.forEach(mensagem => {
-        const cartao = document.createElement("div");
-        cartao.className = "cartaom";
-        
-        cartao.innerHTML = `
-          <section class="corpo-do-cartao">
-            <h1 class="titulo-do-cartao">${mensagem.titulo}</h1>
-            <p class="classificacao">
-              <span class="data-da-mensagem">${mensagem.data}</span>
-            </p>
-            <p class="conteudo-da-mensagem">${mensagem.conteudo}</p>
-          </section>
-        `;
-        
-        container_das_mensagens.appendChild(cartao);
     });
 }
